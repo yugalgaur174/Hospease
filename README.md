@@ -56,7 +56,3 @@ Order Management: Facilitate procurement and manage supplier relationships.
 </ul>
 
 
-<h2>For any questions/queries or support, please contact</h2>
- <h3>Bhaskar Nath</h3>
- <h3>Ph-7667330872</h3>
- <h3>Email-bhaskarnath792@gmail.com</h3>
