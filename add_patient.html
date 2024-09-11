@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/add_patient.css">
+    <link rel="shortcut icon" type="image/png" href="fevicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <title>Add Patient</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo"><a href="dashboard.html">
+            <div class="logo">
+              <img src="images/logo -new.png" alt="">
+            </div>
+          </a></div>
+        <ul>
+            <a href="opdq.html" class="nav-button" data-section="opd-queue">OPD Queue</a>
+            <a href="add_patient.html" class="nav-button" data-section="add-patient">Add Patient</a>
+            <a href="bed.html" class="nav-button" data-section="bed-availability">Bed Availability</a>
+            <a href="inventory.html" class="nav-button" data-section="inventory">Inventory</a>
+            <a href="schedulenew.html" class="nav-button" data-section="schedule">Schedule</a>
+            <a href="blood.html" class="nav-button" data-section="blood-bank">Blood Bank</a>
+            <a href="ambulance.html" class="nav-button" data-section="ambulance">Ambulance</a>
+            <a href="gemini.html" class="nav-button">SF</a>
+        </ul>
+        <div class="sign-in-sign-up">
+            <button>Sign In</button>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <form id="patient-form" class="patient-form">
+            <h2>Add New Patient</h2>
+            <div class="form-row">
+                <div class="form-field">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Patient's Name">
+                </div>
+                <div class="form-field">
+                    <label for="phone_num">Phone Number</label>
+                    <input type="text" id="phone_num" name="phone_num" placeholder="Phone Number">
+                </div>
+                <div class="form-field">
+                    <label for="patient_relative_name">Relative's Name</label>
+                    <input type="text" id="patient_relative_name" name="patient_relative_name" placeholder="Relative's Name">
+                </div>
+                <div class="form-field">
+                    <label for="patient_relative_contact">Relative's Contact</label>
+                    <input type="text" id="patient_relative_contact" name="patient_relative_contact" placeholder="Relative's Contact">
+                </div>
+                <div class="form-field">
+                    <label for="address">Address</label>
+                    <input type="text" id="address" name="address" placeholder="Address">
+                </div>
+                <div class="form-field">
+                    <label for="prior_ailments">Prior Ailments</label>
+                    <input type="text" id="prior_ailments" name="prior_ailments" placeholder="Prior Ailments (e.g., Diabetes)">
+                </div>
+                <div class="form-field">
+                    <label for="bed_num">Bed Number</label>
+                    <input type="text" id="bed_num" name="bed_num" placeholder="Bed Number">
+                </div>
+                <div class="form-field">
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" id="dob" name="dob">
+                </div>
+                <div class="form-field">
+                    <label for="status">Status</label>
+                    <select id="status" name="status">
+                        <option value="Critical">Critical</option>
+                        <option value="Recovering">Recovering</option>
+                        <option value="Recovered">Recovered</option>
+                        <option value="Deceased">Deceased</option>
+                    </select>
+                </div>
+                <div class="form-field">
+                    <label for="doctor">Doctor</label>
+                    <select id="doctor" name="doctor">
+                        <option value="Dr. Smith">Dr. Smith</option>
+                        <option value="Dr. Johnson">Dr. Johnson</option>
+                        <option value="Dr. Williams">Dr. Williams</option>
+                    </select>
+                </div>
+                <div class="form-field">
+                    <label for="symptoms">Symptoms</label>
+                    <textarea id="symptoms" name="symptoms" placeholder="Enter symptoms, separated by commas" rows="4"></textarea>
+                </div>
+            </div>
+            <button type="submit" class="btn-submit">Add Patient</button>
+        </form>
+    </div>
+    
+    <div id="patient-info">
+        <h2>Patient Information</h2>
+        <table id="patient-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Phone Number</th>
+                    <th>Relative's Name</th>
+                    <th>Relative's Contact</th>
+                    <th>Address</th>
+                    <th>Prior Ailments</th>
+                    <th>Bed Number</th>
+                    <th>Date of Birth</th>
+                    <th>Status</th>
+                    <th>Doctor</th>
+                    <th>Symptoms</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Dynamic rows will be added here -->
+            </tbody>
+        </table>
+    </div>
+
+    <script type="module" src="./js/add_patient.js"></script>
+</body>
+</html>

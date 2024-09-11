@@ -1,0 +1,213 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+header {
+    background-color: #0062cc;
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+    font-size: 28px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 1em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #0062cc;
+    text-align: center;
+}
+
+.inventory-list {
+    
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.inventory-list th, .inventory-list td {
+    border: 1px solid #ddd;
+    padding: 14px;
+    text-align: left;
+}
+
+.inventory-list th {
+    background-color: #0062cc;
+    color: #fff;
+    font-weight: bold;
+}
+
+.inventory-list tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.inventory-list td {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Add Item Form & Search Form Styles */
+.add-item-form, .search-form {
+    margin: 30px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.add-item-form input, .add-item-form select, .add-item-form button, 
+.search-form input, .search-form button {
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 25px;
+    border: 1px solid #ddd;
+    outline: none;
+    transition: all 0.3s ease;
+    flex: 1 1 200px; /* Flex-grow, flex-shrink, and flex-basis for responsive design */
+    max-width: 220px; /* Adjust as needed */
+}
+
+.add-item-form button, .search-form button {
+    background-color: #0062cc;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.add-item-form button:hover, .search-form button:hover {
+    background-color: #0051a8;
+}
+
+.add-item-form input:hover, .add-item-form select:hover, .search-form input:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.add-item-form input[type="date"] {
+    cursor: pointer; /* Ensure the cursor indicates the input is clickable */
+}
+
+/* Title Styling */
+.add-item-form h2 {
+    width: 100%; /* Ensure the title spans the full width of the form */
+    margin-bottom: 20px; /* Space between title and form elements */
+    font-size: 24px; /* Title font size */
+    color: #0062cc; /* Title color */
+    text-align: center; /* Center-align the title */
+}
+
+/* Edit and Remove Button Styles */
+.inventory-list .actions {
+    text-align: center;
+}
+
+.inventory-list .actions button {
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: none;
+    margin: 0 5px;
+    cursor: pointer;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.inventory-list .actions .edit-btn {
+    background-color: #f0ad4e; /* Orange */
+}
+
+.inventory-list .actions .remove-btn {
+    background-color: #d9534f; /* Red */
+}
+
+.inventory-list .actions .edit-btn:hover {
+    background-color: #ec971f; /* Darker Orange */
+}
+
+.inventory-list .actions .remove-btn:hover {
+    background-color: #c9302c; /* Darker Red */
+}
+
+.footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #0062cc;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* Navigation Bar */
+.navbar {
+    background-color: #ffffff;
+    padding: 0.5em 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.nav-button {
+    color: #333;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.3em;
+    transition: background-color 0.3s;
+    font-size: 1em;
+    display: inline-block;
+    margin: 0.2em;
+}
+
+.nav-button:hover {
+    background-color: #e0e0e0;
+}
+
+.logo img {
+    height: 3em;
+}
+
+.sign-in-sign-up button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1em;
+    margin: 0.6em;
+    border-radius: 0.3em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1em;
+}
+
+.sign-in-sign-up button:hover {
+    background-color: #0056b3;
+}

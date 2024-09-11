@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OPD Queue Management System</title>
+    <link rel="shortcut icon" type="image/png" href="fevicon.png">
+    <link rel="stylesheet" href="./css/opdq.css">
+
+    <style>
+
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo"><a href="dashboard.html">
+            <div class="logo">
+              <img src="images/logo -new.png" alt="">
+            </div>
+          </a></div>
+        <ul>
+            <a href="opdq.html" class="nav-button" data-section="opd-queue">OPD Queue</a>
+            <a href="add_patient.html" class="nav-button" data-section="add-patient">Add Patient</a>
+            <a href="bed.html" class="nav-button" data-section="bed-availability">Bed Availability</a>
+            <a href="inventory.html" class="nav-button" data-section="inventory">Inventory</a>
+            <a href="schedulenew.html" class="nav-button" data-section="schedule">Schedule</a>
+            <a href="blood.html" class="nav-button" data-section="blood-bank">Blood Bank</a>
+            <a href="ambulance.html" class="nav-button" data-section="ambulance">Ambulance</a>
+            <a href="gemini.html" class="nav-button">SF</a>
+        </ul>
+        <div class="sign-in-sign-up">
+            <button>Sign In</button>
+        </div>
+    </nav>
+    <div class="container">
+        <h1>OPD Queue Management System</h1>
+
+        <div class="tabs">
+            <button class="tab active" data-tab="queue">Current Queue</button>
+            <button class="tab" data-tab="patient">Patient Records</button>
+            <button class="tab" data-tab="doctorQueue">Doctor-wise Queue</button>
+        </div>
+
+        <div id="queueSection" class="tab-content active">
+            <h2>Current Queue</h2>
+            <table id="queueTable">
+                <thead>
+                    <tr>
+                        <th>Patient Name</th>
+                        <th>Prior Ailments</th>
+                        <th>Appointment Time</th>
+                        <th>Doctor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Queue data will be dynamically inserted here -->
+                </tbody>
+            </table>
+        </div>
+
+        <div id="patientSection" class="tab-content">
+            <h2>Patient Records</h2>
+            <table id="patientTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Prior Medical History</th>
+                        <th>Date of Birth</th>
+                        <th>Symptoms</th>
+                        <th>Doctor</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Patient records will be dynamically inserted here -->
+                </tbody>
+            </table>
+        </div>
+
+        <div id="doctorQueueSection" class="tab-content">
+            <h2>Doctor-wise Queue</h2>
+            <form id="doctorFilterForm">
+                <select id="doctorSelect" required>
+                    <option value="">Select Doctor</option>
+                    <!-- Options will be dynamically inserted here -->
+                </select>
+                <button type="submit">View Queue</button>
+            </form>
+            <table id="doctorQueueTable">
+                <thead>
+                    <tr>
+                        <th>Prior Ailments</th>
+                        <th>Patient Name</th>
+                        <th>Appointment Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Doctor-wise queue data will be dynamically inserted here -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- The Modal -->
+        <div id="appointmentModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Schedule Appointment</h2>
+                <form id="appointmentModalForm">
+                    <input type="hidden" id="modalPatientId">
+                    <p><strong id="modalPatientIdLabel"></strong></p>
+                    <p><strong id="modalPatientName"></strong></p>
+                    <p><strong id="modalPriorAilments"></strong></p>
+                    <p><strong id="modalDOB"></strong></p>
+                    <p><strong id="modalSymptoms"></strong></p>
+                    <p><strong id="modalDoctorName"></strong></p>
+                    <input type="datetime-local" id="modalAppointmentTime" required>
+                    <button type="submit">Add Appointment</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="./js/opdq.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ambulance Availability</title>
+    <link rel="shortcut icon" type="image/png" href="fevicon.png">
+    <link rel="stylesheet" href="./css/ambulance.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navbar structure corrected -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="dashboard.html">
+                <div class="logo">
+                  <img src="images/logo -new.png" alt="">
+                </div>
+              </a>
+        </div>
+        <ul>
+            <a href="opdq.html" class="nav-button" data-section="opd-queue">OPD Queue</a>
+            <a href="add_patient.html" class="nav-button" data-section="add-patient">Add Patient</a>
+            <a href="bed.html" class="nav-button" data-section="bed-availability">Bed Availability</a>
+            <a href="inventory.html" class="nav-button" data-section="inventory">Inventory</a>
+            <a href="schedulenew.html" class="nav-button" data-section="schedule">Schedule</a>
+            <a href="blood.html" class="nav-button" data-section="blood-bank">Blood Bank</a>
+            <a href="ambulance.html" class="nav-button" data-section="ambulance">Ambulance</a>
+            <a href="gemini.html" class="nav-button">SF</a>
+        </ul>
+        <div class="sign-in-sign-up">
+            <button>Sign In</button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="header">
+            <h1>Ambulance Availability</h1>
+        </div>
+
+        <div class="summary">
+            <div class="total-ambulances">Total Ambulances: <span id="total-ambulances">0</span></div>
+            <div class="available-ambulances">Available Ambulances: <span id="available-ambulances">0</span></div>
+            <div class="reserved-ambulances">Reserved Ambulances: <span id="reserved-ambulances">0</span></div>
+        </div>
+
+        <div class="ambulances">
+            <div class="search-container">
+                <input type="text" id="search-ambulance" placeholder="Search by ambulance number or driver...">
+                <button onclick="searchAmbulances()">Search</button>
+            </div>
+            <div class="ambulance-grid" id="ambulance-grid"></div>
+        </div>
+    </div>
+
+    <script src="./js/ambulance.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Severity Factor</title>
+    <link rel="stylesheet" href="./css/gemini.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo"><a href="dashboard.html">
+            <div class="logo">
+              <img src="images/logo -new.png" alt="">
+            </div>
+          </a></div>
+        <ul>
+            <a href="opdq.html" class="nav-button">OPD Queue</a>
+            <a href="add_patient.html" class="nav-button">Add Patient</a>
+            <a href="bed.html" class="nav-button">Bed Availability</a>
+            <a href="inventory.html" class="nav-button">Inventory</a>
+            <a href="schedulenew.html" class="nav-button">Schedule</a>
+            <a href="blood.html" class="nav-button">Blood Bank</a>
+            <a href="ambulance.html" class="nav-button">Ambulance</a>
+            <a href="gemini.html" class="nav-button">SF</a>
+        </ul>
+        <div class="sign-in-sign-up">
+            <button>Sign In</button>
+        </div>
+    </nav>
+    
+    <h1>Severity Factor</h1>
+    <div class="box">
+        <div class="container">
+        <p>Enter your prompt: </p>  
+        <div class="req"> 
+            <input type="text" id="prompt">
+            <button id="send">Send</button>
+        </div>
+        <br>
+        <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Response</h2>
+        <p class="response"></p></div>
+    </div>
+
+    <script src="./js/gemini.js"></script>
+</body>
+</html>
